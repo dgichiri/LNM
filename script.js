@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     payButton.addEventListener('click', payWithPaystack);
     
     function payWithPaystack() {
-      const ref = 'TICKET_' + Date.now();
+      const ref = 'Purchase Plot254 Issue_' + Date.now();
       
       const handler = PaystackPop.setup({
         key: '', 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         amount: 1000, 
         currency: 'KES',
         ref: ref,
-        label: "Event Ticket Payment",
+        label: "Plot 254 Payment",
         callback: function(response) {
           alert(`Payment successful! Reference: ${response.reference}`);
         },
